@@ -2,7 +2,10 @@
 GAIN-BRCA: A graph-based explainable AI framework for breast cancer subtype classification based on multi-omics
 
 A graph-based explainable AI framework called GAIN-BRCA leverages multi-omics datasets to classify TCGA-breast cancer subtypes based on PAM50. The omics interaction among the gene expression, DNA methylation, and microRNA was the basis for omics integration. The gene expression is controlled by methylation and miRNA interaction with the gene. This biological relationship was used to integrate the multi-omics datasets.
- 
+
+## GAIN-BRCA Workflow
+![Picture1](https://github.com/user-attachments/assets/27dd7683-89d1-4d35-ba41-aa614811a6ea)
+
 # Requirements
 •	Tensorflow (>= 2.9.1)
 •	Keras (>= 2.9.0)
