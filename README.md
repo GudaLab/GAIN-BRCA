@@ -9,7 +9,7 @@
 
 ## GAIN-BRCA Workflow
 
-![image](https://github.com/user-attachments/assets/424c1ca9-e055-44a6-b0d4-c3bef48e31d6)
+![Picture1](https://github.com/user-attachments/assets/f07b3481-a831-40ec-874e-558af3c8e2e9)
 
 ## File Structure
 GAIN-BRCA/ ├── GAIN_BRCA.py
