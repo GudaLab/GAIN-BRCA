@@ -1,23 +1,70 @@
-# GAIN-BRCA
-# A graph-based explainable AI framework for breast cancer subtype classification based on multi-omics
+# GAIN-BRCA: A Graph-Based Explainable AI Framework for Breast Cancer Subtype Classification Based on Multi-Omics
 
-A graph-based explainable AI framework called GAIN-BRCA leverages multi-omics datasets to classify TCGA-breast cancer subtypes based on PAM50. The omics interaction among the gene expression, DNA methylation, and microRNA was the basis for omics integration. The gene expression is controlled by methylation and miRNA interaction with the gene. This biological relationship was used to integrate the multi-omics datasets.
+## Overview
+
+•	GAIN-BRCA leverages multi-omics datasets to classify TCGA breast cancer subtypes based on PAM50.
+•	The framework integrates gene expression, DNA methylation, and microRNA data by utilizing their biological interactions. 
+•	Specifically, it considers the regulatory relationships where gene expression is influenced by methylation and miRNA interactions. 
+•	This graph-based explainable AI framework combines these interactions for improved multi-omics integration and prediction.
 
 ## GAIN-BRCA Workflow
-![manuscript_data_Page_02](https://github.com/user-attachments/assets/7d5a876f-5ee2-49d6-aafc-276683100158)
 
-# Requirements
+![image](https://github.com/user-attachments/assets/424c1ca9-e055-44a6-b0d4-c3bef48e31d6)
+
+## File Structure
+GAIN-BRCA/ ├── GAIN_BRCA.py
+└── dataset/ 
+└── Input/ 
+├── mRNA_NormCount.csv 
+├── miRNA_NormCount.csv 
+├── methyl_NormBeta.csv 
+├── miRNA_mRNA_interaction.csv 
+├── CpG_mRNA_interaction.csv 
+└── dependent_variables.csv
+├── delta_integration.py 
+├── GAIN_BRCA_ANN.py 
+
+## Requirements
 •	Tensorflow (>= 2.9.1)
 •	Keras (>= 2.9.0)
 •	Python (>= 3.8.10)
 •	Scikit-learn (>=1.2.1)
 •	Basic Python packages: numpy, pandas, math
+Ensure these libraries are installed.
 
-## Data availability
-The datasets are publicly accessible on https://portal.gdc.cancer.gov/.
-
-## Usage
-Clone the repository or download source code files and prepare breast cancer multi-omics datasets as per the dataset/Input folder. Edit the directory path in GAIN-BRCA.py to the input files and run. The final accuracy will be as an output of the ANN model trained on GAIN-BRCA based integrated omics after the successful execution of the command.
+## Data sources: 
+1.	Clone or Download the Repository:
+Clone this repository or download the source code files.
+2.	Prepare the Input Data:
+Place the breast cancer multi-omics datasets in the dataset/Input/ folder.
+The required files are:
+o	mRNA_NormCount.csv
+o	miRNA_NormCount.csv
+o	methyl_NormBeta.csv
+o	miRNA_mRNA_interaction.csv
+o	CpG_mRNA_interaction.csv
+o	dependent_variables.csv
+The datasets can be found here “https://zenodo.org/records/15175435”
+3.	Edit File Paths (if necessary):
+Ensure that the directory path in GAIN_BRCA.py matches the location of your input files.
+4.	Run the Main Script:
+Execute the following command from the root directory:
+python GAIN_BRCA.py
+The script will:
+•	Import and integrate the multi-omics datasets.
+•	Compute integrated expression values using the provided interaction data.
+•	Train an ANN model using stratified k-fold cross-validation.
+•	Output the final prediction accuracy and save prediction probabilities to a CSV file.
+Code Documentation
+•	GAIN_BRCA.py:
+Serves as the main execution script, orchestrating data import, integration, and model training.
+•	delta_integration.py:
+Contains functions to integrate genomic data:
+•	int_Delta1(miRNA, mRNA, Int1): Integrates miRNA and mRNA expression data.
+•	int_Delta2(methyl, mRNA, Int2): Integrates methylation data and mRNA expression data.
+•	GAIN_BRCA_ANN.py:
+Implements the ANN model using TensorFlow/Keras.
+This module handles data scaling, cross-validation, model training, evaluation, and saving prediction outputs.
 
 ## Contact
 Please contact japatel@unmc.edu if you have any inquiries or issues.
