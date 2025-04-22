@@ -1,7 +1,4 @@
-# Rewrite the formatted GAIN-BRCA README with corrected code block formatting
-corrected_readme = """# GAIN-BRCA
-
-A Graph-Based Explainable AI Framework for Breast Cancer Subtype Classification Based on Multi‑Omics
+### A Graph-Based Explainable AI Framework for Breast Cancer Subtype Classification Based on Multi‑Omics
 
 ---
 
