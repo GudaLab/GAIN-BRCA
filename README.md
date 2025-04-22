@@ -27,7 +27,6 @@ A Graph-Based Explainable AI Framework for Breast Cancer Subtype Classification 
 
 ## File Structure
 
-\`\`\`bash
 GAIN-BRCA/
 ├── GAIN_BRCA.py
 ├── delta_integration.py
@@ -40,7 +39,6 @@ GAIN-BRCA/
         ├── miRNA_mRNA_interaction.csv
         ├── CpG_mRNA_interaction.csv
         └── dependent_variables.csv
-\`\`\`
 
 ## Requirements
 
@@ -92,4 +90,4 @@ GAIN-BRCA/
 ## Contact
 
 For questions or issues, please contact:  
-Jai Patel — japatel@unmc.edu  
+Jai Patel — japatel@unmc.edu
