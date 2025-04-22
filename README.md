@@ -64,7 +64,7 @@ GAIN-BRCA/
 <a name="clone-or-download"></a>
 ### Clone or Download
 ```bash
-git clone <repository_url>
+git clone https://github.com/GudaLab/GAIN-BRCA
 ```
 
 <a name="prepare-input-data"></a>
